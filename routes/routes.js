@@ -70,8 +70,8 @@ router.get("/seven-day", (req, res) => {
   res.render("seven-day");
 });
 //  todo
-router.get("/moon", (req, res) => {
-  res.render("moon");
+router.get("/moon-cycle", (req, res) => {
+  res.render("moon-cycle");
 });
 
 

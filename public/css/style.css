@@ -1,0 +1,14 @@
+body{
+    background-color: aquamarine;
+    background-color:rgb(81, 132, 141) ;
+}
+#addItemForm {
+    display: none;
+}
+
+.weatherDiv{
+    width:640px;
+    height: 426px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

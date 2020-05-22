@@ -1,0 +1,10 @@
+extends layout.pug
+block content 
+
+    section#content 
+        form(action ='/hello', method='post')
+            label Please Enter your name!
+                input(type='text', name='username')
+            label Please Enter your ZipCode!
+                input(type='text', name='zip')
+            button(type='submit') Submit
