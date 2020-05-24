@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
 var axios = require("axios");
-const weather = require("../public/scripts/weather")
-require('dotenv').config()
-const key = process.env.WEATHER_KEY
-
+const weather = require("../public/scripts/weather");
+require("dotenv").config();
+const key = process.env.WEATHER_KEY;
+let zip = "";
+let weatherForecast = "";
+let days = [];
 function asyncHandler(cb) {
   return async (req, res, next) => {
     try {
@@ -15,42 +17,32 @@ function asyncHandler(cb) {
   };
 }
 
-
 //  / Get home page
-
 router.get(
   "/",
   asyncHandler(async (req, res) => {
     const name = req.cookies.username;
-    const zip = req.cookies.zip;
-    // const backgroundColor=''  
-    const textColor=''
-    const imgPath=''
-    console.log(process.env.WEATHER_KEY)
-     await axios
+    zip = req.cookies.zip;
+    await axios
       .get(
         `https://api.weatherbit.io/v2.0/forecast/daily?&postal_code=${zip}&country=US&key=${key}&units=i}`
       )
       .then(function (res) {
-        return weatherForecast = res.data;
+        return (weatherForecast = res.data);
       });
-      weather.weatherBackground(200)
-     await axios
-      .get(
-        `https://gnews.io/api/v3/topics/nation?q=example&token=${newsKey}&lang=en&country=us}`
-      )
-      .then(function (res) {
-        return news = res.data.articles;
-      });
+    for (i = 0; i < weatherForecast.data.length; i++) {
+      const weatherCode = weatherForecast.data[i].weather.code;
+      let day =weather.weatherBackground(weatherCode)
+      days.push(day);
+      
+    }
     if (name) {
-      console.log(news[0]);
-      return res.render("home", { name, zip, weatherForecast });
+      return res.render("home", { name, zip, weatherForecast, days});
     } else {
       res.redirect("/hello");
     }
   })
 );
-
 router.get("/hello", (req, res) => {
   const name = req.cookies.username;
   if (name) {
@@ -73,6 +65,5 @@ router.get("/seven-day", (req, res) => {
 router.get("/moon-cycle", (req, res) => {
   res.render("moon-cycle");
 });
-
 
 module.exports = router;

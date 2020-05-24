@@ -6,9 +6,14 @@ body{
     display: none;
 }
 
-.weatherDiv{
+.todayWeather{
     width:640px;
     height: 426px;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+.todayWeather img{
+    position:absolute;
+    z-index: -100;
 }

@@ -1,0 +1,27 @@
+{
+  "name": "weatherforecast",
+  "version": "1.0.0",
+  "description": "an app that tells a user the weather",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattRoger/WeatherForecast.git"
+  },
+  "author": "matt roger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattRoger/WeatherForecast/issues"
+  },
+  "homepage": "https://github.com/MattRoger/WeatherForecast#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "pug": "^2.0.4"
+  }
+}
