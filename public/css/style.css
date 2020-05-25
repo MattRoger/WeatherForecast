@@ -7,17 +7,26 @@
     display: none;
 }
 
-p{
+p,li{
 font-family: 'Prompt', sans-serif;
 }
-
+h1,h2,h3,
 nav{
-    font-family: 'Bungee', cursive
+    font-family: 'Bungee', cursive;
 }
-
-
+nav{
+    text-align: right;
+    font-size: 1.45em;
+    letter-spacing: .35em;
+}
+.container{
+    max-width: 95%;
+}
+.introText{
+    text-align: right;
+}
 .weatherTextWrapper{
-    width: 40%;
+    width: 50%;
     height: 100%;
 }
 .todayWeather{
@@ -33,13 +42,13 @@ nav{
 }
 .nextDays{
     width: 450px;
-    height: 250px;
+    height: 225px;
     position: relative;
     font-family: 'Prompt', sans-serif;
 }
 .nextDays img{
     width: 376px;
-    height: 250;
+    height: 225px;
     position:absolute;
     z-index: -100;
     opacity: .85;

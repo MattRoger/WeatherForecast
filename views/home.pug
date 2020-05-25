@@ -2,25 +2,25 @@ extends layout.pug
 block content
   section#content
     //- -const weatherPath = `background-image:`+" url("+imgPath+")"    
-    p the weather for #{weatherForecast.city_name} #{weatherForecast.state_code}
     div.container-fluid
         div.row
             div.col
-                    div(class="todayWeather")
-                        img(src=days[0].imgPath alt="day one image")
-                        div(class="weatherTextWrapper" style={background:`rgba(${days[0].backgroundColor},.5)`, color: days[0].textColor} )
-                            p The Weather For today, #{week[0]}
-                            p #{weatherForecast.data[0].weather.description}      
-                            ul
-                                li Current Temp: #{weatherForecast.data[0].temp} F
-                                li High Temp: #{weatherForecast.data[0].high_temp}
-                                li Low Temp: #{weatherForecast.data[0].low_temp}
-                                li Wind Speed: #{weatherForecast.data[0].wind_spd}
+                div(class="todayWeather ml-4")
+                    p.introText the weather for #{weatherForecast.city_name} #{weatherForecast.state_code}
+                    img(src=days[0].imgPath alt="day one image")
+                    div(class="weatherTextWrapper p-2" style={background:`rgba(${days[0].backgroundColor},.5)`, color: days[0].textColor} )
+                        p The Weather For today, #{week[0]}
+                        p #{weatherForecast.data[0].weather.description}      
+                        ul
+                            li Current Temp: #{weatherForecast.data[0].temp} F
+                            li High Temp: #{weatherForecast.data[0].high_temp}
+                            li Low Temp: #{weatherForecast.data[0].low_temp}
+                            li Wind Speed: #{weatherForecast.data[0].wind_spd}
             div.col
-                div(class="row nextDays" style={color:days[1].textColor})
+                div(class="row nextDays mb-4" style={color:days[1].textColor})
                     div.col
                         img(src=days[1].imgPath alt="day two image")
-                        div(class="weatherTextWrapper" style={background:`rgba(${days[0].backgroundColor},.75)`, color: days[0].textColor} )                      
+                        div(class="weatherTextWrapper p-2" style={background:`rgba(${days[0].backgroundColor},.75)`, color: days[0].textColor} )                      
                             p The Weather For #{week[1]}
                             p #{weatherForecast.data[1].weather.description} 
                             ul
@@ -30,7 +30,7 @@ block content
                 div(class="row nextDays" style={color:days[2].textColor})
                     div.col
                         img(src=days[2].imgPath alt="day three image")
-                        div(class="weatherTextWrapper" style={background:`rgba(${days[0].backgroundColor},.75)`, color: days[0].textColor})
+                        div(class="weatherTextWrapper p-2" style={background:`rgba(${days[0].backgroundColor},.75)`, color: days[0].textColor})
                             p The Weather For  #{week[2]}
                             p #{weatherForecast.data[2].weather.description} 
                             ul

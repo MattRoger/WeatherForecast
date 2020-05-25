@@ -1,7 +1,10 @@
-nav(style={color:days[0].textColor})
-    h1 Matt's Weather App
-    a(href=`/` style={color:days[0].textColor}) Home
-    a(href=`/seven-day` style={color:days[0].textColor}) 7 Day Forecast
-    a(href=`/moon-cycle` style={color:days[0].textColor}) Moon Cycle
-h2(style={color:days[0].textColor}) Hello #{name}, Here is the info for Zip Code #{zip}
-    
+div(class="container mx-0 mb-2 w-100")
+  div(class="row justify-content-between")
+    div.col-8
+        h1(class="ml-4 mt-2 nameBlock" style={color:days[0].textColor}) Matt's Weather App
+        h3(class="ml-4 mt-2 nameBlock" style={color:days[0].textColor}) Hello #{name}, Here is the info for Zip Code #{zip}
+    div(class="col-4 ml-0 ")
+        nav(class="mt-2 mr-2  ml-0 p-0" style={color:days[0].textColor})
+            a(class="mr-4" href=`/` style={color:days[0].textColor}) Home
+            a( href=`/seven-day` style={color:days[0].textColor}) 7 Day Forecast
+            //- a(href=`/air-quality` style={color:days[0].textColor}) Air Quality  

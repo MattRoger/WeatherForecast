@@ -20,13 +20,16 @@ function asyncHandler(cb) {
   };
 }
 const getWeather=()=>{ 
+    if(weatherForecast){
       for (i = 0; i < weatherForecast.data.length; i++) {
         const weatherCode = weatherForecast.data[i].weather.code;
         let day =weather.weatherBackground(weatherCode)
         days.push(day); 
         console.log(weatherCode)       
       }
-}
+    }
+  }
+  
 //  / Get home page
 router.get(
   "/",
@@ -35,7 +38,7 @@ router.get(
     zip = req.cookies.zip;
     await axios
       .get(
-        `https://api.weatherbit.io/v2.0/forecast/daily?&postal_code=${zip}&country=US&key=${key}&units=i}`
+        `https://api.weatherbit.io/v2.0/forecast/daily?&postal_code=${zip}&country=US&key=${key}&units=i`
       )
       .then(function (res) {
         return (weatherForecast = res.data);
@@ -83,8 +86,33 @@ router.get("/seven-day",
     }
   }));
 //  todo
-router.get("/moon-cycle", (req, res) => {
-  res.render("moon-cycle");
-});
+router.get("/air-quality",
+  asyncHandler(async (req, res) => {
+    const name = req.cookies.username;
+    zip = req.cookies.zip;
+    await axios
+      .get(
+        `https://api.weatherbit.io/v2.0/forecast/daily?&postal_code=${zip}&country=US&key=${key}&units=I`
+      )
+      .then(function (res) {      
+        return (weatherForecast = res.data);
+      }); 
+    await axios
+      .get(
+        `https://api.weatherbit.io/v2.0/current/airquality?&postal_code=${zip}&country=US&key=${key}&units=I`
+      )
+      .then(function (res) {      
+        console.log(res.data)
+        return (airQuality = res.data);
+      }); 
+    getWeather()
+    if (name) {
+      return res.render("air-quality", { name, zip, weatherForecast, days, week});
+    } else {
+      res.redirect("/hello");
+    }
+  }));
+
+
 
 module.exports = router;

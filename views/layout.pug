@@ -8,8 +8,12 @@ html(lang="en")
     script(src="https://code.jquery.com/jquery.js")
     script(src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js")
     link(href="https://fonts.googleapis.com/css2?family=Bungee&family=Prompt:wght@600&display=swap" rel="stylesheet")
-    body(style={background:`rgb(${days[0].backgroundColor})`})
-    include includes/header.pug    
-    block content
-    include includes/footer.pug
-    <script type="text/javascript" src="/scripts/date.js"></script>
+    if !weatherForecast
+      body
+        block content
+    else
+      body(style={background:`rgb(${days[0].backgroundColor})`})
+        include includes/header.pug    
+        block content
+        include includes/footer.pug
+        <script type="text/javascript" src="/scripts/date.js"></script>
