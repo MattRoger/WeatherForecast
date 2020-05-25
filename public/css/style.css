@@ -1,19 +1,50 @@
-body{
-    background-color: aquamarine;
-    background-color:rgb(81, 132, 141) ;
-}
+/* body{
+    font-family: 'Bungee', cursive;
+    font-family: 'Prompt', sans-serif;
+} */
+
 #addItemForm {
     display: none;
 }
 
+p{
+font-family: 'Prompt', sans-serif;
+}
+
+nav{
+    font-family: 'Bungee', cursive
+}
+
+
+.weatherTextWrapper{
+    width: 40%;
+    height: 100%;
+}
 .todayWeather{
     width:640px;
-    height: 426px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 426px;  
     position: relative;
+    font-size: 1.25em;
 }
 .todayWeather img{
     position:absolute;
     z-index: -100;
+    opacity: .85;
+}
+.nextDays{
+    width: 450px;
+    height: 250px;
+    position: relative;
+    font-family: 'Prompt', sans-serif;
+}
+.nextDays img{
+    width: 376px;
+    height: 250;
+    position:absolute;
+    z-index: -100;
+    opacity: .85;
+}
+.nextDays p{
+    display: block;
+    padding: 0;
 }

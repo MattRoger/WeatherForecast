@@ -1,0 +1,30 @@
+.dayWrapper{
+    width: 462px;
+    height: 462px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+.dayWrapper:hover{   
+    overflow: visible;
+    z-index: 200;
+}
+.dayInnerWrapper{
+    position: relative;
+    height: 462px;
+}
+.dayInnerWrapper img{
+    position: absolute;
+    top:0;
+    left:-400px;
+    z-index:-100;  
+}
+
+.dayWrapperText{
+    height: 426px;
+}
+    
+.dayTab{
+    height: 3em;
+}

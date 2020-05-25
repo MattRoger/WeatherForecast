@@ -2,4 +2,90 @@ extends layout.pug
 block content 
  
  section#content 
- h2 7  dayno
+ h2 Seven Day Forecast
+ div.container
+  div.row
+    div(class="col-sm dayWrapper day1")
+        p.dayTab #{week[0]}
+        div(class="dayInnerWrapper" style={color:days[0].textColor})
+            img(src=days[0].imgPath)
+            div(class="dayWrapperText " style={background:`rgba(${days[0].backgroundColor},.5)`})
+                p #{weatherForecast.data[0].weather.description}  
+                ul
+                    li Current Temp: #{weatherForecast.data[0].temp} F
+                    li High Temp: #{weatherForecast.data[0].high_temp}
+                    li Low Temp: #{weatherForecast.data[0].low_temp}
+                    li Wind Speed: #{weatherForecast.data[0].wind_spd}
+                div
+    div(class="col-sm dayWrapper day2")
+        p.dayTab #{week[1]}
+        div(class="dayInnerWrapper" style={color:days[1].textColor})
+            img(src=days[1].imgPath)
+            div(class="dayWrapperText" style={background:`rgba(${days[1].backgroundColor},.5)`})
+                p #{weatherForecast.data[1].weather.description}
+                ul
+                    li Current Temp: #{weatherForecast.data[1].temp} F
+                    li High Temp: #{weatherForecast.data[1].high_temp}
+                    li Low Temp: #{weatherForecast.data[1].low_temp}
+                    li Wind Speed: #{weatherForecast.data[1].wind_spd}
+                div
+    div(class="col-sm dayWrapper day3")
+        p.dayTab #{week[2]}
+        div(class="dayInnerWrapper" style={color:days[2].textColor})
+            img(src=days[2].imgPath)
+            div(class="dayWrapperText" style={background:`rgba(${days[2].backgroundColor},.5)`})
+                p #{weatherForecast.data[2].weather.description}
+                ul
+                    li Current Temp: #{weatherForecast.data[2].temp} F
+                    li High Temp: #{weatherForecast.data[2].high_temp} F
+                    li Low Temp: #{weatherForecast.data[2].low_temp} F
+                    li Wind Speed: #{weatherForecast.data[2].wind_spd}
+                div
+    div(class="col-sm dayWrapper day4")
+        p.dayTab #{week[3]}
+        div(class="dayInnerWrapper" style={color:days[3].textColor})
+            img(src=days[3].imgPath)
+            div(class="dayWrapperText" style={background:`rgba(${days[3].backgroundColor},.5)`})
+                p #{weatherForecast.data[3].weather.description}
+                ul
+                    li Current Temp: #{weatherForecast.data[3].temp} F
+                    li High Temp: #{weatherForecast.data[3].high_temp}
+                    li Low Temp: #{weatherForecast.data[3].low_temp}
+                    li Wind Speed: #{weatherForecast.data[3].wind_spd}
+                div
+    div(class="col-sm dayWrapper day5")
+        p.dayTab #{week[4]}
+        div(class="dayInnerWrapper" style={color:days[4].textColor})
+            img(src=days[4].imgPath)
+            div(class="dayWrapperText" style={background:`rgba(${days[4].backgroundColor},.5)`})
+                p #{weatherForecast.data[4].weather.description}
+                ul
+                    li Current Temp: #{weatherForecast.data[4].temp}F
+                    li High Temp: #{weatherForecast.data[4].high_temp}
+                    li Low Temp: #{weatherForecast.data[4].low_temp}
+                    li Wind Speed: #{weatherForecast.data[4].wind_spd}
+                div
+    div(class="col-sm dayWrapper day6")
+        p.dayTab #{week[5]}
+        div(class="dayInnerWrapper" style={color:days[5].textColor})
+            img(src=days[5].imgPath)
+            div(class="dayWrapperText" style={ background:`rgba(${days[5].backgroundColor},.5)`})
+                p #{weatherForecast.data[5].weather.description}
+                ul
+                    li Current Temp: #{weatherForecast.data[5].temp} F
+                    li High Temp: #{weatherForecast.data[5].high_temp}
+                    li Low Temp: #{weatherForecast.data[5].low_temp}
+                    li Wind Speed: #{weatherForecast.data[5].wind_spd}
+                div
+    div(class="col-sm dayWrapper day7")
+        p.dayTab #{week[6]}
+        div(class="dayInnerWrapper" style={color:days[6].textColor})
+            img(src=days[6].imgPath)
+            div(class="dayWrapperText" style={ background:`rgba(${days[5].backgroundColor},.5)`})
+                p #{weatherForecast.data[6].weather.description}
+                ul
+                    li Current Temp: #{weatherForecast.data[6].temp} F
+                    li High Temp: #{weatherForecast.data[6].high_temp}
+                    li Low Temp: #{weatherForecast.data[6].low_temp}
+                    li Wind Speed: #{weatherForecast.data[6].wind_spd}
+                div

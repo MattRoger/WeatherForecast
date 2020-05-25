@@ -1,41 +1,39 @@
 extends layout.pug
 block content
   section#content
-    //- -const weatherPath = `background-image:`+" url("+imgPath+")"
-    h2 Hello #{name}, Here is the info for Zip Code #{zip}
+    //- -const weatherPath = `background-image:`+" url("+imgPath+")"    
     p the weather for #{weatherForecast.city_name} #{weatherForecast.state_code}
     div.container-fluid
-        div(style={color: textColor, background:backgroundColor})
-            div.row
-                div.col
-                        div(class="todayWeather")
-                            img(src=days[0].imgPath alt="day one image")
-                            p The Weather For today, DATE
+        div.row
+            div.col
+                    div(class="todayWeather")
+                        img(src=days[0].imgPath alt="day one image")
+                        div(class="weatherTextWrapper" style={background:`rgba(${days[0].backgroundColor},.5)`, color: days[0].textColor} )
+                            p The Weather For today, #{week[0]}
+                            p #{weatherForecast.data[0].weather.description}      
                             ul
                                 li Current Temp: #{weatherForecast.data[0].temp} F
-                                li High Temp: #{weatherForecast.data[0].hight_temp}
+                                li High Temp: #{weatherForecast.data[0].high_temp}
                                 li Low Temp: #{weatherForecast.data[0].low_temp}
                                 li Wind Speed: #{weatherForecast.data[0].wind_spd}
-                            div
-                                p #{weatherForecast.data[0].weather.description}      
-                div.col
-                    div(class="row nextDays")
-                        img(src=days[1].imgPath alt="day two image")                      
-                        p The Weather For today, DATE2
-                        ul
-                            li Current Temp: #{weatherForecast.data[1].temp} F
-                            li High Temp: #{weatherForecast.data[1].hight_temp}
-                            li Low Temp: #{weatherForecast.data[1].low_temp}
-                            li Wind Speed: #{weatherForecast.data[1].wind_spd}
-                        div
+            div.col
+                div(class="row nextDays" style={color:days[1].textColor})
+                    div.col
+                        img(src=days[1].imgPath alt="day two image")
+                        div(class="weatherTextWrapper" style={background:`rgba(${days[0].backgroundColor},.75)`, color: days[0].textColor} )                      
+                            p The Weather For #{week[1]}
                             p #{weatherForecast.data[1].weather.description} 
-                    div(class="row nextDays")
-                        img(src=days[2].imgPath alt="day three image") 
-                        p The Weather For today, DATE3
-                        ul
-                            li Current Temp: #{weatherForecast.data[2].temp} F
-                            li High Temp: #{weatherForecast.data[2].hight_temp}
-                            li Low Temp: #{weatherForecast.data[2].low_temp}
-                            li Wind Speed: #{weatherForecast.data[2].wind_spd}
-                        div
+                            ul
+                                li High Temp: #{weatherForecast.data[1].high_temp}
+                                li Low Temp: #{weatherForecast.data[1].low_temp}
+                                li Wind Speed: #{weatherForecast.data[1].wind_spd}
+                div(class="row nextDays" style={color:days[2].textColor})
+                    div.col
+                        img(src=days[2].imgPath alt="day three image")
+                        div(class="weatherTextWrapper" style={background:`rgba(${days[0].backgroundColor},.75)`, color: days[0].textColor})
+                            p The Weather For  #{week[2]}
                             p #{weatherForecast.data[2].weather.description} 
+                            ul
+                                li High Temp: #{weatherForecast.data[2].high_temp}
+                                li Low Temp: #{weatherForecast.data[2].low_temp}
+                                li Wind Speed: #{weatherForecast.data[2].wind_spd}
