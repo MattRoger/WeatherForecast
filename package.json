@@ -5,7 +5,7 @@
   "description": "an app that tells a user the weather",
   "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
