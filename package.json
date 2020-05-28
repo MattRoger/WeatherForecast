@@ -5,7 +5,9 @@
   "description": "an app that tells a user the weather",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "watch": "nodemon app.js"
   },
   "repository": {
     "type": "git",

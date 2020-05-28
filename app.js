@@ -15,5 +15,5 @@ app.use(routes)
 app.use(express.static('public'))
 
 app.listen(PORT, ()=>{
-    console.log("Server 3000");
+    console.log(`Listening on ${PORT}`);
 })
