@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/MattRoger/WeatherForecast/issues"
   },
-  "homepage": "https://github.com/MattRoger/WeatherForecast#readme",
+  "homepage": "https://github.com/MattRoger/WeatherForecast",
   "dependencies": {
     "axios": "^0.19.2",
     "cookie-parser": "^1.4.5",
