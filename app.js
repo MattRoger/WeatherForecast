@@ -1,3 +1,4 @@
+var PORT = process.env.PORT || 3000
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -13,6 +14,6 @@ app.use(routes)
 
 app.use(express.static('public'))
 
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
     console.log("Server 3000");
 })
