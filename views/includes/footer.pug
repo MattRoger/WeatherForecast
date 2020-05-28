@@ -1,1 +1,12 @@
-p footer
+footer
+    div(class="container-fluid")
+    div.row
+        div.col
+            form(action ='/', method='post' class="ml-4")           
+                        label( style={color:days[0].textColor}) Change your ZipCode!   
+                            input(type='text', name='zip')
+                        button(type='submit') Submit
+        div.col
+        form(action ='/goodbye', method='post' class="mr-4 pr-4")
+            label( style={color:days[0].textColor}) Sign Out          
+            button(type='submit' class="ml-2") Goodbye

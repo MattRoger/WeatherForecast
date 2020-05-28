@@ -1,0 +1,12 @@
+extends layout.pug
+block content 
+    section#content
+        div.errorDiv
+            h4 Oops Something Went Wrong
+            if errorMessage
+               h4 #{errorMessage}
+            h4 Try Again?
+            form(action ='/error', method='post')
+                label Please Enter your ZIP Code!
+                    input(type='text', name='zip')
+                button(type='submit') Submit

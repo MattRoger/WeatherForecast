@@ -1,0 +1,13 @@
+.errorDiv,
+.hello{
+    background-color: skyblue;
+    height: 100vh;
+    padding:2em;
+}
+.hello label{
+    display: block;
+}
+.hello input{
+    display: block;
+}
+

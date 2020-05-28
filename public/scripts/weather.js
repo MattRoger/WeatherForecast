@@ -74,7 +74,7 @@ const partlyCloudy={
     imgPath: "./weatherImages/partlyCloudy.jpg",
   }
 const overcast={
-    backgroundColor: "172, 173, 173",    
+    backgroundColor: "121, 122, 128",    
     textColor: "#F1F2EE",
     imgPath: "/weatherImages/overcast.jpg",
   }
@@ -88,6 +88,9 @@ const weatherBackground = (wetCode) => {
   let styleInfo = {};
   switch (wetCode) {
     case 200:
+      styleInfo = thunderStorm
+      break;
+    case 201:
       styleInfo = thunderStorm
       break;
     case 202:

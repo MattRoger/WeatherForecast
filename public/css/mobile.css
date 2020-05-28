@@ -1,0 +1,26 @@
+/* ipad */
+@media only screen and (max-width: 1024px) {
+  .todayWeather {
+    margin-bottom: 4em;
+  }
+  
+  .dayContainer{
+      margin-left: auto;
+      margin-right: auto;
+      flex-grow: initial;   
+    }
+    .nextDays{
+        margin-left: auto;
+        margin-right: auto;
+      width:640px;
+      display: block;
+      margin: auto;
+      padding:0;
+  }
+  .nextDays img{
+    height: 100%;;
+  }
+  .weatherTextWrapper {
+      margin: 0;
+  }
+}

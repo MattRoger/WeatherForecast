@@ -1,30 +1,46 @@
-.dayWrapper{
-    width: 462px;
-    height: 462px;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    font-family: 'Prompt', sans-serif;
-}
-.dayWrapper:hover{   
-    overflow: visible;
-    z-index: 200;
-}
-.dayInnerWrapper{
-    position: relative;
-    height: 462px;
-}
-.dayInnerWrapper img{
-    position: absolute;
-    top:0;
-    left:-400px;
-    z-index:-100;  
+.dayWrapper {
+  width: 462px;
+  height: 475px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt", sans-serif;
 }
 
-.dayWrapperText{
+.dayInnerWrapper {
+    position: relative;    
+}
+.dayInnerWrapper img {
+  position: absolute;
+  top: 0;
+  left: -430px;
+  z-index: -100;
+  height: 462px;
+}
+
+.dayWrapperText {
     height: 426px;
 }
-    
-.dayTab{
+
+.dayTab {
     height: 3em;
 }
+
+.dayTab {
+  margin-bottom:0;  
+  border-radius: 0px 144px 0px 0px;
+  -moz-border-radius: 0px 144px 0px 0px;
+  -webkit-border-radius: 0px 144px 0px 0px;
+  border-top:3px solid black;
+  border-left:2px solid black;
+  border-right:2px solid black;
+}
+.dayInnerWrapper{
+    border-bottom:3px solid black;
+    border-left:2px solid black;
+    border-right:2px solid black;
+}
+
+.dayWrapper img{
+}
+    

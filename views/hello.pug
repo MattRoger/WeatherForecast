@@ -1,10 +1,14 @@
 extends layout.pug
 block content 
-
-    section#content 
-        form(action ='/hello', method='post')
-            label Please Enter your name!
-                input(type='text', name='username')
-            label Please Enter your ZipCode!
-                input(type='text', name='zip')
-            button(type='submit') Submit
+    section#content
+        div.hello
+            h1 Matt's Weather App
+            p Please Enter your Name and ZIP Code 
+            if errorMessage
+                h3 #{errorMessage}
+            form(action ='/hello', method='post')
+                label Please Enter your name!
+                    input(type='text', name='username')
+                label Please Enter your ZIP Code!
+                    input(type='text', name='zip')
+                button(type='submit') Submit

@@ -3,57 +3,99 @@
     font-family: 'Prompt', sans-serif;
 } */
 
+body {
+  position: relative;
+}
 #addItemForm {
-    display: none;
+  display: none;
 }
 
-p,li{
-font-family: 'Prompt', sans-serif;
+label,
+button,
+h2,
+p,
+li {
+  font-family: "Prompt", sans-serif;
 }
-h1,h2,h3,
-nav{
-    font-family: 'Bungee', cursive;
+h1,
+h2,
+nav {
+  font-family: "Bungee", cursive;
 }
-nav{
-    text-align: right;
-    font-size: 1.45em;
-    letter-spacing: .35em;
+h1 {
+  letter-spacing: 0.45em;
+  line-height: 1.25em;
 }
-.container{
-    max-width: 95%;
+nav {
+  text-align: right;
+  font-size: 1.45em;
+  letter-spacing: 0.35em;
 }
-.introText{
-    text-align: right;
+button,
+label {
+  letter-spacing: 0.15em;
 }
+footer {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 95%;
+}
+.introText {
+  text-align: right;
+}
+
+.weatherTextWrapper2,
+.weatherTextWrapper {
+  width: 50%;
+  border-right: 4px solid rgba(0, 0, 0, 0.521);
+}
+
 .weatherTextWrapper{
-    width: 50%;
-    height: 100%;
+  height: 100%;
 }
-.todayWeather{
-    width:640px;
-    height: 426px;  
-    position: relative;
-    font-size: 1.25em;
+
+.todayWeather {
+  width: 640px;
+  height: 426px;
+  position: relative;
+  font-size: 1.25em;
 }
-.todayWeather img{
-    position:absolute;
-    z-index: -100;
-    opacity: .85;
+
+.todayWeather img {
+  position: absolute;
+  z-index: -100;
+  opacity: 0.85;
 }
-.nextDays{
-    width: 450px;
-    height: 225px;
-    position: relative;
-    font-family: 'Prompt', sans-serif;
+.nextDays {
+  width: 450px;
+  height: 225px;
+  position: relative;
+  font-family: "Prompt", sans-serif;
 }
-.nextDays img{
-    width: 376px;
-    height: 225px;
-    position:absolute;
-    z-index: -100;
-    opacity: .85;
+
+.weatherTextWrapper2{
+  height: 225px;
 }
-.nextDays p{
-    display: block;
-    padding: 0;
+
+.nextDays img {
+  width: 376px;
+  height: 225px;
+  position: absolute;
+  z-index: -100;
+  opacity: 0.85;
+}
+.nextDays p {
+  display: block;
+  padding: 0;
+}
+
+.boxShadow {
+  -webkit-box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.75);
 }
