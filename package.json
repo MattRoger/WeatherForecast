@@ -1,10 +1,11 @@
 {
+  
   "name": "weatherforecast",
   "version": "1.0.0",
   "description": "an app that tells a user the weather",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
