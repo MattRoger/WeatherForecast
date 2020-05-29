@@ -9,16 +9,6 @@
     "start": "node app.js",
     "watch": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MattRoger/WeatherForecast.git"
-  },
-  "author": "matt roger",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MattRoger/WeatherForecast/issues"
-  },
-  "homepage": "https://github.com/MattRoger/WeatherForecast",
   "dependencies": {
     "axios": "^0.19.2",
     "cookie-parser": "^1.4.5",
