@@ -1,10 +1,8 @@
 # WeatherForecast
-A little info about your project and/ or overview that explains what the project is about.
-
-
+A Weather App that gives a user a thee day and seven day forcast. The current day's weather provides the css theme.
 
 ## Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+I wanted to create an app using express, axios, and cookies.
 
 ## Build Status
 Y/N
@@ -20,7 +18,7 @@ install
 ## Features
 
 ## Code style
-If you're using any code style like xo, standard etc. That will help others while contributing to your project. Ex
+If you're using any code style like xo, standard etc. That will help others while contributing to your project. 
 
 
 ## Installation
