@@ -10,13 +10,14 @@ I wanted to create an app using express, axios, and cookies.
 Complete and forecasting weather across the US.
 
 ## Tech/framework used
-install 
 * express
 * pug.js
 * dotenv
 * axios
 * cookie-parser
 * donenv
+
+* bootstrap
 
 ## Features
 
@@ -37,10 +38,12 @@ install
 
 
 ## API Reference
-
-## Tests
+[Weatherbit API](https://www.weatherbit.io/)
 
 ## How to use?
+
+### Step 1, log in
+Enter your ZIP code and a username.
 
 
 ## Credits / Contact information
@@ -49,5 +52,3 @@ install
   * :e-mail: mattroger.webdev@gmail.com
   * :man_office_worker: www.linkedin.com/in/matt-roger/
 
-
-## License
