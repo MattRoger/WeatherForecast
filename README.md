@@ -7,7 +7,7 @@ A Weather App that gives a user a thee day and seven day forcast. The current da
 I wanted to create an app using express, axios, and cookies.
 
 ## Build Status
-Y/N
+Complete and forecasting weather across the US.
 
 ## Tech/framework used
 install 
@@ -16,6 +16,7 @@ install
 * dotenv
 * axios
 * cookie-parser
+* donenv
 
 ## Features
 
