@@ -27,6 +27,13 @@ If you're using any code style like xo, standard etc. That will help others whil
 ## Installation
 * :trident: Fork it
 * :sheep: Clone it
+install 
+* express
+* pug.js
+* dotenv
+* axios
+* cookie-parser
+* donenv
 
 
 ## API Reference
