@@ -40,13 +40,13 @@ const getWeather = () => {
 const digitsCount = (n) => {
   let count = 0;
   if (n >= 1) ++count;
-
   while (n / 10 >= 1) {
     n /= 10;
     ++count;
   }
   return count;
 };
+
 
 //  / Get home page
 router.get(
@@ -140,40 +140,6 @@ router.get(
     getWeather();
     if (name) {
       return res.render("seven-day", {
-        name,
-        zip,
-        weatherForecast,
-        days,
-        week,
-      });
-    } else {
-      res.redirect("/hello");
-    }
-  })
-);
-//  todo
-router.get(
-  "/air-quality",
-  asyncHandler(async (req, res) => {
-    const name = req.cookies.username;
-    zip = req.cookies.zip;
-    await axios
-      .get(
-        `https://api.weatherbit.io/v2.0/forecast/daily?&postal_code=${zip}&country=US&key=${key}&units=I`
-      )
-      .then(function (res) {
-        return (weatherForecast = res.data);
-      });
-    await axios
-      .get(
-        `https://api.weatherbit.io/v2.0/current/airquality?&postal_code=${zip}&country=US&key=${key}&units=I`
-      )
-      .then(function (res) {
-        return (airQuality = res.data);
-      });
-    getWeather();
-    if (name) {
-      return res.render("air-quality", {
         name,
         zip,
         weatherForecast,
