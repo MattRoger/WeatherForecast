@@ -193,7 +193,7 @@ const weatherBackground = (wetCode) => {
       styleInfo = partlyCloudy;
       break;
     case 803:
-      styleInfo = overcast;
+      styleInfo = partlyCloudy;
       break;
     case 804:
       styleInfo = overcast;

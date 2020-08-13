@@ -5,7 +5,7 @@ const weather = require("../public/scripts/weather");
 const weekObj = require("../public/scripts/date");
 require("dotenv").config();
 const key = process.env.WEATHER_KEY;
-let zip = "";
+
 let weatherForecast = "";
 let days = [];
 const week = weekObj.getWeek();
@@ -31,6 +31,7 @@ const getWeather = () => {
   if (weatherForecast) {
     for (i = 0; i < weatherForecast.data.length; i++) {
       const weatherCode = weatherForecast.data[i].weather.code;
+      console.log(`day ${i} ${weatherCode}`)
       let day = weather.weatherBackground(weatherCode);
       days.push(day);
     }
@@ -98,8 +99,11 @@ router.post("/hello", (req, res) => {
     res.redirect("/");
   }
 });
+// clear zip
 router.post("/", (req, res) => {
+  res.clearCookie("zip", req.body.zip);
   const zipCheck = digitsCount(req.body.zip);
+  getWeather();
   if (isNaN(req.body.zip) || zipCheck != 5) {
     const errorMessage = "Please Fill Enter A Valid Zip Code";
     res.render("error", { errorMessage });
@@ -108,6 +112,9 @@ router.post("/", (req, res) => {
     res.redirect("/");
   }
 });
+
+
+// error
 router.post("/error", (req, res) => {
   const zipCheck = digitsCount(req.body.zip);
   if (isNaN(req.body.zip) || zipCheck != 5) {
@@ -118,7 +125,7 @@ router.post("/error", (req, res) => {
     res.redirect("/");
   }
 });
-
+// log out
 router.post("/goodbye", (req, res) => {
   res.clearCookie("username", req.body.username);
   res.clearCookie("zip", req.body.zip);
