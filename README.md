@@ -1,37 +1,69 @@
 # Matt's Weather App
+[See it in Action](https://matt-rogers-weather-app.herokuapp.com/hello)
 
-A little info about your project and/ or overview that explains what the project is about.
+An Express app that gives users weather based on their zipcode. 
+![screen shot](./screenshots/screenshot.jpg)
 
 ## Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+I wanted to create an app using express, axios, and cookies.
 
 ## Build Status
-Y/N
+Complete and forecasting weather across the US.
+
+
+#### bugs
+-[ ] Page does not update css when zipcode is updated
+
+* possible fixes
+  * I think the server needs to be refreshed.
+    * there maybe an npm for this
+#### Todo
+-[ ] Add css animation to login page
+
+* How todo it
+  * GSAP 
 
 ## Tech/framework used
-* express
-* pug.js
+* [Pug.js](https://pugjs.org/api/getting-started.html)
+* Express
+* Nodejs
 * dotenv
 * axios
-* cookie-parser
+* jQuery
+* [Bootstrap](https://getbootstrap.com/)
+* [Cookie-parser](https://www.npmjs.com/package/cookie-parser)
+* [Openweather API](https://openweathermap.org/appid)
 
 ## Features
+The styling is determined by today's weather
+
 
 ## Code style
-If you're using any code style like xo, standard etc. That will help others while contributing to your project. Ex
+jQuery, Express, and Pug
 
 
 ## Installation
 * :trident: Fork it
 * :sheep: Clone it
-
+* Get your api key for [Openweather API](https://openweathermap.org/appid)
+* Install Dependencies
+```
+$ npm install pug
+$ npm install express --save
+$ npm install dotenv
+$ npm install axios
+$ npm install cookie-parser
+```
 
 ## API Reference
+[Openweather API](https://openweathermap.org/appid) 16 Day forecast [Docs](https://openweathermap.org/forecast16)
 
-## Tests
 
 ## How to use?
-
+ 1. Enter a name under 15 letters
+ 2. Enter A valid Zipcode
+ 3. Click Seven Day forecast to get the weeks weather
+ 4. Click goodbye to log out and clear cookies.
 
 ## Credits / Contact information
 * @MattRoger 
@@ -40,57 +72,5 @@ If you're using any code style like xo, standard etc. That will help others whil
   * :man_office_worker: www.linkedin.com/in/matt-roger/
 
 
-## License
 
-
-[See it in Action](https://matt-rogers-weather-app.herokuapp.com/hello)
-
-## Motivation
-I wanted to create an app using express, axios, and cookies.
-
-## Build Status
-Complete and forecasting weather across the US.
-
-## Tech/framework used
-* express
-* pug.js
-* dotenv
-* axios
-* cookie-parser
-* donenv
-
-* bootstrap
-
-## Features
-
-## Code style
-If you're using any code style like xo, standard etc. That will help others while contributing to your project. 
-
-
-## Installation
-* :trident: Fork it
-* :sheep: Clone it
-install 
-* express
-* pug.js
-* dotenv
-* axios
-* cookie-parser
-* donenv
-
-
-## API Reference
-[Weatherbit API](https://www.weatherbit.io/)
-
-## How to use?
-
-### Step 1, log in
-Enter your ZIP code and a username.
-
-
-## Credits / Contact information
-* @MattRoger 
-  * :man_office_worker: https://mattroger.github.io/
-  * :e-mail: mattroger.webdev@gmail.com
-  * :man_office_worker: www.linkedin.com/in/matt-roger/
 
